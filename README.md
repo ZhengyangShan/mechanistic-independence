@@ -1,7 +1,5 @@
 # Mechanistic Independence
 
-Code for [**Measuring Mechanistic Independence: Can Bias Be Removed Without Erasing Demographics?**](https://aclanthology.org/2026.eacl-long.199.pdf) (Shan & Mueller, EACL 2026).
-
 We locate SAE features that drive demographic predictions, ablate them at inference time, and measure how bias and recognition accuracy change.
 
 ## Install
@@ -51,11 +49,23 @@ prompts/    drop your prompt template files here
 ## Citation
 
 ```bibtex
-@inproceedings{shan2026measuring,
-    title     = {Measuring Mechanistic Independence: Can Bias Be Removed Without Erasing Demographics?},
-    author    = {Shan, Zhengyang and Mueller, Aaron},
-    booktitle = {EACL},
-    year      = {2026}
+@inproceedings{shan-mueller-2026-measuring,
+    title = "Measuring Mechanistic Independence: Can Bias Be Removed Without Erasing Demographics?",
+    author = "Shan, Zhengyang  and
+      Mueller, Aaron",
+    editor = "Demberg, Vera  and
+      Inui, Kentaro  and
+      Marquez, Llu{\'i}s",
+    booktitle = "Proceedings of the 19th Conference of the {E}uropean Chapter of the {A}ssociation for {C}omputational {L}inguistics (Volume 1: Long Papers)",
+    month = mar,
+    year = "2026",
+    address = "Rabat, Morocco",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.eacl-long.199/",
+    doi = "10.18653/v1/2026.eacl-long.199",
+    pages = "4241--4265",
+    ISBN = "979-8-89176-380-7",
+    abstract = "We investigate how independent demographic bias mechanisms are from general demographic recognition in language models. Using a multi-task evaluation setup where demographics are associated with names, professions, and education levels, we measure whether models can be debiased while preserving demographic detection capabilities. We compare attribution-based and correlation-based methods for locating bias features. We find that targeted sparse autoencoder feature ablations in Gemma-2-9B reduce bias without degrading recognition performance: attribution-based ablations mitigate race and gender profession stereotypes while preserving name recognition accuracy, whereas correlation-based ablations are more effective for education bias. Qualitative analysis further reveals that removing attribution features in education tasks induces ``prior collapse'', thus increasing overall bias. This highlights the need for dimension-specific interventions. Overall, our results show that demographic bias arises from task-specific mechanisms rather than absolute demographic markers, and that mechanistic inference-time interventions can enable surgical debiasing without compromising core model capabilities."
 }
 ```
 
